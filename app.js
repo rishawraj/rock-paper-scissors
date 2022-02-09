@@ -7,11 +7,6 @@ function computerPlay() {
   return outcomes[randomNumber(0, 3)];
 }
 
-// const playerSelection = "rock";
-// console.log("you: " + playerSelection);
-// const computerSelection = computerPlay();
-// console.log("computer: " + computerSelection);
-
 let computerScore = 0;
 let playerScore = 0;
 
