@@ -36,6 +36,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
   for (let i = 0; i < 5; i++) {
+    //   every thing inside for loop repeats every loops.
     let playerSelection = prompt("type rock, paper or scissors");
     playerSelection = playerSelection.toLowerCase();
     const computerSelection = computerPlay();
