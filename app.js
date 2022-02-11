@@ -13,24 +13,26 @@ let playerScore = 0;
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == "rock" && computerSelection == "scissors") {
     playerScore++;
-    return `you win! rock beats paper. Score: ${playerScore}`;
+    return `you win! rock beats paper. Player Score: ${playerScore}`;
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
     computerScore++;
-    return `you lose! rock beats paper. Score: ${computerScore} `;
+    return `you lose! rock beats paper. Computer Score: ${computerScore} `;
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
     playerScore++;
-    return `you win! scissors cuts paper. Score: ${playerScore}`;
+    return `you win! scissors cuts paper. Player Score: ${playerScore}`;
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
     computerScore++;
-    return `you lose! scissors cuts paper. Score: ${computerScore}`;
+    return `you lose! scissors cuts paper. Computer Score: ${computerScore}`;
   } else if (playerSelection == "paper" && computerSelection == "rock") {
     playerScore++;
-    return `you win! paper covers rock. Score: ${playerScore}`;
+    return `you win! paper covers rock. Player Score: ${playerScore}`;
   } else if (playerSelection == "rock" && computerSelection == "paper") {
     computerScore++;
-    return `you lose! paper covers rock. Score: ${computerScore}`;
-  } else {
+    return `you lose! paper covers rock. Computer Score: ${computerScore}`;
+  } else if (playerSelection == computerSelection) {
     return "draw!";
+  } else {
+    return "something unexpected happened!";
   }
 }
 
