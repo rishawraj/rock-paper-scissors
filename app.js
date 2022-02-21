@@ -22,7 +22,7 @@ function playRound(playerSelection) {
   if (playerSelection == "rock" && computerSelection == "cs-scissors") {
     csS.classList.add("active");
     csR.classList.remove("active");
-    csP.classList.add("active");
+    csP.classList.remove("active");
     playerScore++;
     return `you win! rock beats paper. Player Score: ${playerScore}`;
   } else if (playerSelection == "scissors" && computerSelection == "cs-rock") {
