@@ -37,6 +37,7 @@ function playRound(playerSelection) {
     return "something unexpected happened!";
   }
 }
+
 const buttons = document.querySelectorAll(".btn");
 
 function disableButtons() {
@@ -44,9 +45,7 @@ function disableButtons() {
     elem.disabled = true;
   });
 }
-// disableButtons();
-
-// console.log(buttons[1]);
+/
 let para = document.getElementById("result");
 let csResult = document.getElementById("display-cs-result");
 let playerResult = document.getElementById("display-player-reult");
@@ -58,18 +57,14 @@ buttons.forEach((buttons) => {
     para.innerHTML = b;
     console.log(b);
     csResult.innerHTML = computerScore;
-    // console.log(computerScore + " , " + playerScore);
     playerResult.innerHTML = playerScore;
 
     if (playerScore == 5) {
       disableButtons();
       para.innerHTML = "match over!! you win.";
-
-      console.log("match over!! you win.");
     } else if (computerScore == 5) {
       disableButtons();
       para.innerHTML = "match over!! computer won.";
-      console.log("match over!! computer won.");
     }
   });
 });

@@ -22,11 +22,36 @@ button:hover {
 }
 h2 {
   padding: 0.5rem 0;
+  text-align: center;
+}
+p {
+  text-align: center;
 }
 .player,
 .cs-play {
   gap: 1rem;
 }
-#rock {
-  background-color: aquamarine;
+
+h1 {
+  padding-top: 1rem;
+}
+footer {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
