@@ -55,3 +55,8 @@ h1 {
   display: flex;
   justify-content: center;
 }
+.active {
+  background-color: rgb(245, 133, 133);
+  color: white;
+  border: 1px solid rgb(14, 11, 11);
+}
