@@ -10,7 +10,9 @@ function computerPlay() {
 let computerScore = 0;
 let playerScore = 0;
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
+  let computerSelection = computerPlay();
+
   if (playerSelection == "rock" && computerSelection == "cs-scissors") {
     playerScore++;
     return `you win! rock beats paper. Player Score: ${playerScore}`;
@@ -35,40 +37,39 @@ function playRound(playerSelection, computerSelection) {
     return "something unexpected happened!";
   }
 }
+const buttons = document.querySelectorAll(".btn");
 
-// function game() {
-//   for (let i = 0; i < 5; i++) {
-//     //   every thing inside for loop repeats every loops.
-//     // let playerSelection = prompt("type rock, paper or scissors");
-//     playerSelection = playerSelection.toLowerCase();
-//     const computerSelection = computerPlay();
-//     console.log(playRound(playerSelection, computerSelection));
-//   }
-//   if (playerScore > computerScore) {
-//     console.log(
-//       `you're the winner! Final Score: ${playerScore} to ${computerScore}`
-//     );
-//   } else if (computerScore > playerScore) {
-//     console.log(
-//       `you're the loser! Final Score: ${playerScore} to ${computerScore}`
-//     );
-//   } else {
-//     console.log(`you tied. Final Score: ${playerScore} to ${computerScore}`);
-//   }
-// }
-// game();
-
-document.querySelectorAll(".btn").forEach((item) => {
-  item.addEventListener("click", (event) => {
-    let playerSelection = item.classList;
-    let b = playerSelection[1]; //DOMTokenlist -> array methods
-    let computerSelection = computerPlay();
-    let t = document.getElementById(`${computerSelection}`);
-    t.style.backgroundColor = "red";
-    // console.log(computerSelection);
-    let c = playRound(b, computerSelection);
-
-    console.log(c);
+function disableButtons() {
+  buttons.forEach((elem) => {
+    elem.disabled = true;
   });
-  console.log(item);
+}
+// disableButtons();
+
+// console.log(buttons[1]);
+let para = document.getElementById("result");
+let csResult = document.getElementById("display-cs-result");
+let playerResult = document.getElementById("display-player-reult");
+
+buttons.forEach((buttons) => {
+  buttons.addEventListener("click", () => {
+    let a = buttons.classList[1];
+    let b = playRound(a);
+    para.innerHTML = b;
+    console.log(b);
+    csResult.innerHTML = computerScore;
+    // console.log(computerScore + " , " + playerScore);
+    playerResult.innerHTML = playerScore;
+
+    if (playerScore == 5) {
+      disableButtons();
+      para.innerHTML = "match over!! you win.";
+
+      console.log("match over!! you win.");
+    } else if (computerScore == 5) {
+      disableButtons();
+      para.innerHTML = "match over!! computer won.";
+      console.log("match over!! computer won.");
+    }
+  });
 });
