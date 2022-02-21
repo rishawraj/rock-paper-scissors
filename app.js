@@ -45,7 +45,7 @@ function disableButtons() {
     elem.disabled = true;
   });
 }
-/
+
 let para = document.getElementById("result");
 let csResult = document.getElementById("display-cs-result");
 let playerResult = document.getElementById("display-player-reult");
