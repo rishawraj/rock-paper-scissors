@@ -89,8 +89,6 @@ let para = document.getElementById("result");
 let csResult = document.getElementById("display-cs-result");
 let playerResult = document.getElementById("display-player-reult");
 
-// console.log(csButtons);
-
 buttons.forEach((buttons) => {
   buttons.addEventListener("click", () => {
     let a = buttons.classList[1];
