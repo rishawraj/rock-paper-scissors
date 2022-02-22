@@ -13,11 +13,12 @@ let csButtons = document.querySelectorAll(".cs-btn");
 
 function playRound(playerSelection) {
   let computerSelection = computerPlay();
-  console.log(computerSelection);
+  // console.log(computerSelection);
 
   let csS = document.getElementById("cs-scissors");
   let csR = document.getElementById("cs-rock");
   let csP = document.getElementById("cs-paper");
+  console.log(csS.attributes);
 
   if (playerSelection == "rock" && computerSelection == "cs-scissors") {
     csS.classList.add("active");
@@ -56,6 +57,21 @@ function playRound(playerSelection) {
     computerScore++;
     return `you lose! paper covers rock. Computer Score: ${computerScore}`;
   } else if (`cs-${playerSelection}` == computerSelection) {
+    if (computerSelection == "cs-rock") {
+      csS.classList.remove("active");
+      csR.classList.add("active");
+      csP.classList.remove("active");
+    } else if (computerSelection == "cs-paper") {
+      csS.classList.remove("active");
+      csR.classList.remove("active");
+      csP.classList.add("active");
+    } else if (computerSelection == "cs-scissors") {
+      csS.classList.add("active");
+      csR.classList.remove("active");
+      csP.classList.remove("active");
+    }
+    console.log("draw: " + computerSelection);
+
     return `draw! ${playerSelection} is same as ${playerSelection}`;
   } else {
     return "something unexpected happened!";
@@ -82,7 +98,6 @@ buttons.forEach((buttons) => {
     let b = playRound(a);
 
     para.innerHTML = b;
-    // console.log(b);
     csResult.innerHTML = computerScore;
     playerResult.innerHTML = playerScore;
 
