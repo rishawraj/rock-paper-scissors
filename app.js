@@ -70,7 +70,6 @@ function playRound(playerSelection) {
       csR.classList.remove("active");
       csP.classList.remove("active");
     }
-    console.log("draw: " + computerSelection);
 
     return `draw! ${playerSelection} is same as ${playerSelection}`;
   } else {
