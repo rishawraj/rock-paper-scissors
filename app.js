@@ -13,12 +13,10 @@ let csButtons = document.querySelectorAll(".cs-btn");
 
 function playRound(playerSelection) {
   let computerSelection = computerPlay();
-  // console.log(computerSelection);
 
   let csS = document.getElementById("cs-scissors");
   let csR = document.getElementById("cs-rock");
   let csP = document.getElementById("cs-paper");
-  // console.log(csS.attributes);
 
   if (playerSelection == "rock" && computerSelection == "cs-scissors") {
     csS.classList.add("active");
