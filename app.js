@@ -18,44 +18,44 @@ function playRound(playerSelection) {
   let csS = document.getElementById("cs-scissors");
   let csR = document.getElementById("cs-rock");
   let csP = document.getElementById("cs-paper");
-  console.log(csS.attributes);
+  // console.log(csS.attributes);
 
   if (playerSelection == "rock" && computerSelection == "cs-scissors") {
     csS.classList.add("active");
     csR.classList.remove("active");
     csP.classList.remove("active");
     playerScore++;
-    return `you win! rock beats paper. Player Score: ${playerScore}`;
+    return `you win! rock beats paper. `;
   } else if (playerSelection == "scissors" && computerSelection == "cs-rock") {
     csS.classList.remove("active");
     csR.classList.add("active");
     csP.classList.remove("active");
     computerScore++;
-    return `you lose! rock beats paper. Computer Score: ${computerScore} `;
+    return `you lose! rock beats paper.  `;
   } else if (playerSelection == "scissors" && computerSelection == "cs-paper") {
     csS.classList.remove("active");
     csR.classList.remove("active");
     csP.classList.add("active");
     playerScore++;
-    return `you win! scissors cuts paper. Player Score: ${playerScore}`;
+    return `you win! scissors cuts paper.`;
   } else if (playerSelection == "paper" && computerSelection == "cs-scissors") {
     csS.classList.add("active");
     csR.classList.remove("active");
     csP.classList.remove("active");
     computerScore++;
-    return `you lose! scissors cuts paper. Computer Score: ${computerScore}`;
+    return `you lose! scissors cuts paper. `;
   } else if (playerSelection == "paper" && computerSelection == "cs-rock") {
     csS.classList.remove("active");
     csR.classList.add("active");
     csP.classList.remove("active");
     playerScore++;
-    return `you win! paper covers rock. Player Score: ${playerScore}`;
+    return `you win! paper covers rock. `;
   } else if (playerSelection == "rock" && computerSelection == "cs-paper") {
     csS.classList.remove("active");
     csR.classList.remove("active");
     csP.classList.add("active");
     computerScore++;
-    return `you lose! paper covers rock. Computer Score: ${computerScore}`;
+    return `you lose! paper covers rock.`;
   } else if (`cs-${playerSelection}` == computerSelection) {
     if (computerSelection == "cs-rock") {
       csS.classList.remove("active");
@@ -81,6 +81,7 @@ const buttons = document.querySelectorAll(".btn");
 
 function disableButtons() {
   buttons.forEach((elem) => {
+    console.log(elem.classList);
     elem.disabled = true;
   });
 }
@@ -100,10 +101,11 @@ buttons.forEach((buttons) => {
 
     if (playerScore == 5) {
       disableButtons();
-      para.innerHTML = "match over!! you win.";
+      para.innerHTML = "match over!! you win.  Please refresh to play again!";
     } else if (computerScore == 5) {
       disableButtons();
-      para.innerHTML = "match over!! computer won.";
+      para.innerHTML =
+        "match over!! computer won. Please refresh to play again!";
     }
   });
 });

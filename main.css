@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  background-color: azure;
   height: 100vh;
   /* width: 100vw; */
   display: flex;
@@ -15,10 +16,17 @@ button {
   border-radius: 0.5rem;
   padding: 0.3rem;
 }
-button:hover {
+#cs-rock,
+#cs-paper,
+#cs-scissors {
+  pointer-events: none;
+}
+
+.btn:hover {
+  stroke: none;
   background-color: grey;
   color: white;
-  border: 1px solid rgb(14, 11, 11);
+  /* border: 1px solid rgb(14, 11, 11); */
 }
 h2 {
   padding: 0.5rem 0;
@@ -58,5 +66,12 @@ h1 {
 .active {
   background-color: rgb(245, 133, 133);
   color: white;
-  border: 1px solid rgb(14, 11, 11);
+  /* border: 1px solid rgb(14, 11, 11); */
+}
+img {
+  height: 50px;
+  width: 50px;
+}
+.btn:disabled {
+  background-color: white;
 }
