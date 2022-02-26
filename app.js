@@ -87,9 +87,11 @@ function disableButtons() {
 let para = document.getElementById("result");
 let csResult = document.getElementById("display-cs-result");
 let playerResult = document.getElementById("display-player-reult");
+const sound = document.getElementById("sound");
 
 buttons.forEach((buttons) => {
   buttons.addEventListener("click", () => {
+    sound.play();
     let a = buttons.classList[1];
     let b = playRound(a);
 
