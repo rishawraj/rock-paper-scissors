@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  background-image: url(/icons/2.png);
   background-color: azure;
   height: 100vh;
   /* width: 100vw; */
@@ -29,6 +30,7 @@ button {
   /* border: 1px solid rgb(14, 11, 11); */
 }
 h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 0.5rem 0;
   text-align: center;
 }
@@ -56,7 +58,8 @@ footer {
   text-align: center;
 }
 h1 {
-  background-color: lightblue;
+  /* font-family: monospace; */
+  background-color: #add8e6;
   color: white;
   width: 100%;
   display: flex;
@@ -68,6 +71,11 @@ h1 {
   color: white;
   /* border: 1px solid rgb(14, 11, 11); */
 }
+button {
+  padding: 15px;
+  /* width: 100px; */
+  border: none;
+}
 img {
   height: 50px;
   width: 50px;
@@ -76,6 +84,9 @@ img {
   background-color: white;
 }
 #result {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 900;
   line-height: 1.8rem;
   flex-basis: 70px;
   text-transform: capitalize;
@@ -83,7 +94,27 @@ img {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .main-content {
+  width: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: white;
+  padding: 4rem;
+  border-radius: 1rem;
+
+  /* glass */
+
+  background: rgba(119, 231, 240, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(17.5px);
+  -webkit-backdrop-filter: blur(17.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.cs-play h2 {
+  color: lightcoral;
+}
+.player h2 {
+  color: rgb(44, 91, 107);
 }
