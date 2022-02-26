@@ -144,8 +144,8 @@ img {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .main-content {
-  width: 400px;
-  height: 500px;
+  width: 310px;
+  height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,8 +154,8 @@ img {
   border-radius: 1rem;
 
   /* glass */
-  backdrop-filter: blur(5px) saturate(136%);
-  -webkit-backdrop-filter: blur(12px) saturate(136%);
+  backdrop-filter: blur(2px) saturate(136%);
+  -webkit-backdrop-filter: blur(2px) saturate(136%);
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
