@@ -24,8 +24,8 @@ button {
 
 .btn:hover {
   stroke: none;
-  background-color: grey;
-  color: white;
+  background-color: lightblue;
+  /* color: white; */
   /* border: 1px solid rgb(14, 11, 11); */
 }
 h2 {
@@ -40,28 +40,28 @@ p {
   gap: 1rem;
 }
 
-h1 {
-  padding-top: 1rem;
-}
 footer {
   padding: 1rem;
-  background-color: black;
+  background-color: rgb(143, 190, 206);
   color: white;
   width: 100%;
   display: flex;
   justify-content: center;
+  font-weight: 900;
 }
 .content {
   /* background-color: aqua; */
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 h1 {
-  background-color: black;
+  background-color: lightblue;
   color: white;
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 1rem 0.5rem;
 }
 .active {
   background-color: rgb(245, 133, 133);
@@ -74,4 +74,16 @@ img {
 }
 .btn:disabled {
   background-color: white;
+}
+#result {
+  line-height: 1.8rem;
+  flex-basis: 70px;
+  text-transform: capitalize;
+  padding: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

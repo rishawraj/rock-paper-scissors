@@ -23,37 +23,37 @@ function playRound(playerSelection) {
     csR.classList.remove("active");
     csP.classList.remove("active");
     playerScore++;
-    return `you win! rock beats paper. `;
+    return `you win! <br> rock beats scissors. `;
   } else if (playerSelection == "scissors" && computerSelection == "cs-rock") {
     csS.classList.remove("active");
     csR.classList.add("active");
     csP.classList.remove("active");
     computerScore++;
-    return `you lose! rock beats paper.  `;
+    return `you lose! <br> rock beats scissors.  `;
   } else if (playerSelection == "scissors" && computerSelection == "cs-paper") {
     csS.classList.remove("active");
     csR.classList.remove("active");
     csP.classList.add("active");
     playerScore++;
-    return `you win! scissors cuts paper.`;
+    return `you win! <br> scissors cuts paper.`;
   } else if (playerSelection == "paper" && computerSelection == "cs-scissors") {
     csS.classList.add("active");
     csR.classList.remove("active");
     csP.classList.remove("active");
     computerScore++;
-    return `you lose! scissors cuts paper. `;
+    return `you lose! <br> scissors cuts paper. `;
   } else if (playerSelection == "paper" && computerSelection == "cs-rock") {
     csS.classList.remove("active");
     csR.classList.add("active");
     csP.classList.remove("active");
     playerScore++;
-    return `you win! paper covers rock. `;
+    return `you win! <br> paper covers rock. `;
   } else if (playerSelection == "rock" && computerSelection == "cs-paper") {
     csS.classList.remove("active");
     csR.classList.remove("active");
     csP.classList.add("active");
     computerScore++;
-    return `you lose! paper covers rock.`;
+    return `you lose! <br> paper covers rock.`;
   } else if (`cs-${playerSelection}` == computerSelection) {
     if (computerSelection == "cs-rock") {
       csS.classList.remove("active");
@@ -69,7 +69,7 @@ function playRound(playerSelection) {
       csP.classList.remove("active");
     }
 
-    return `draw! ${playerSelection} is same as ${playerSelection}`;
+    return `draw! <br> ${playerSelection} is same as ${playerSelection}`;
   } else {
     return "something unexpected happened!";
   }
@@ -99,11 +99,10 @@ buttons.forEach((buttons) => {
 
     if (playerScore == 5) {
       disableButtons();
-      para.innerHTML = "match over!! you win.  Please refresh to play again!";
+      para.innerHTML = "YOU WIN!! <br> Please refresh to play again!";
     } else if (computerScore == 5) {
       disableButtons();
-      para.innerHTML =
-        "match over!! computer won. Please refresh to play again!";
+      para.innerHTML = "YOU LOST!! <br> Please refresh to play again!";
     }
   });
 });
