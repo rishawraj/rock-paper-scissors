@@ -60,7 +60,8 @@ footer {
 }
 h1 {
   /* font-family: monospace; */
-  background-color: #add8e6;
+
+  background-color: rgb(143, 190, 206);
   color: white;
   width: 100%;
   display: flex;
@@ -72,6 +73,8 @@ h1 {
   color: white;
   /* border: 1px solid rgb(14, 11, 11); */
 }
+
+/* button style */
 button {
   padding: 15px;
   /* width: 100px; */
@@ -107,7 +110,7 @@ button {
   will-change: box-shadow, transform;
   font-size: 18px;
 }
-/* buttons */
+
 button:focus {
   box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
@@ -123,7 +126,7 @@ button:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
 }
-/* end */
+/* button style end */
 
 img {
   height: 50px;
