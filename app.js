@@ -10,13 +10,12 @@ function computerPlay() {
 let computerScore = 0;
 let playerScore = 0;
 let csButtons = document.querySelectorAll(".cs-btn");
+let csS = document.getElementById("cs-scissors");
+let csR = document.getElementById("cs-rock");
+let csP = document.getElementById("cs-paper");
 
 function playRound(playerSelection) {
   let computerSelection = computerPlay();
-
-  let csS = document.getElementById("cs-scissors");
-  let csR = document.getElementById("cs-rock");
-  let csP = document.getElementById("cs-paper");
 
   if (playerSelection == "rock" && computerSelection == "cs-scissors") {
     csS.classList.add("active");
@@ -137,7 +136,10 @@ function playAgain() {
   computerScore = 0;
   csResult.innerHTML = "0";
   playerResult.innerHTML = "0";
-  para.innerHTML = "LETS <br> PLAY";
+  para.innerHTML = "LETS <br> PLAY!";
+  csS.classList.remove("active");
+  csR.classList.remove("active");
+  csP.classList.remove("active");
 
   sound.play();
   enableButtons();
