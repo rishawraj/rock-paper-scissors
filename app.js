@@ -83,11 +83,29 @@ function disableButtons() {
     elem.disabled = true;
   });
 }
+function enableButtons() {
+  buttons.forEach((elem) => {
+    console.log(elem.classList);
+    elem.disabled = false;
+  });
+}
 
 let para = document.getElementById("result");
 let csResult = document.getElementById("display-cs-result");
 let playerResult = document.getElementById("display-player-reult");
 const sound = document.getElementById("sound");
+
+// modal
+let modal = document.getElementById("modal");
+let modalClose = document.querySelector(".close");
+let finalResult = document.getElementById("finalResult");
+
+function showModal() {
+  modal.style.display = "block";
+}
+function closeModal() {
+  modal.style.display = "none";
+}
 
 buttons.forEach((buttons) => {
   buttons.addEventListener("click", () => {
@@ -102,9 +120,26 @@ buttons.forEach((buttons) => {
     if (playerScore == 5) {
       disableButtons();
       para.innerHTML = "YOU WIN!! <br> Please refresh to play again!";
+      finalResult.innerHTML = "YOU WIN";
+      showModal();
     } else if (computerScore == 5) {
       disableButtons();
       para.innerHTML = "YOU LOST!! <br> Please refresh to play again!";
+      finalResult.innerHTML = "YOU LOSE";
+      showModal();
     }
   });
 });
+
+//  play again!!
+function playAgain() {
+  playerScore = 0;
+  computerScore = 0;
+  csResult.innerHTML = "0";
+  playerResult.innerHTML = "0";
+  para.innerHTML = "LETS <br> PLAY";
+
+  sound.play();
+  enableButtons();
+  closeModal();
+}
